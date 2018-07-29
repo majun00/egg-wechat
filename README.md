@@ -45,6 +45,15 @@ $ npm stop
    4.5 配置：体验接口权限表中的网页授权获取用户基本信息，点击修改，地址为natapp地址，不需要http://
 5、扫描微信公众号，即可查看微信公众号效果。
 ```
+### 已有的主要功能
+```
+1、jssdk接入
+2、微信用户信息获取
+3、jquery-weui网页页面接入
+3、与微信交互文字交互、发送地图、发送相片等。
+4、具体文字交互也可参考的express版本的： https://github.com/dpc761218914/express_wechat_demo
+5、项目参考工程： https://github.com/chrish-2017/wechat_public_number_demo
+```
 
 微信公众号配置截图：
 
