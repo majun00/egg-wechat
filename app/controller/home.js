@@ -4,6 +4,7 @@ const crypto = require('crypto');
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
+  //jssdk接入，发送appId,timestamp/noceStr,signature到前端。
   async index() {
     const appId = this.ctx.app.config.wechat_config.appId;
     const ticket = this.ctx.app.ticket;
@@ -87,7 +88,7 @@ class HomeController extends Controller {
     const AppID = 'wx36ddef7981435b3a';
     // 第一步：用户同意授权，获取code
     const router = 'oauth';
-    // 这是编码后的地址 http://qqtg78.natappfree.cc
+    // 这是编码后的地址 http://qqtg78.natappfree.cc，替换rul
     const return_uri = 'http%3A%2F%2Fdb7qpj.natappfree.cc%2F'+router;
     const scope = 'snsapi_userinfo';
     this.ctx.redirect('https://open.weixin.qq.com/connect/oauth2/authorize?appid='+AppID+'&redirect_uri='+return_uri+'&response_type=code&scope='+scope+'&state=STATE#wechat_redirect');

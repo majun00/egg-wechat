@@ -17,7 +17,7 @@
 
 
 <div class="weui-panel weui-panel_access">
-  <div class="weui-panel__hd">最新动态</div>
+  <div class="weui-panel__hd">最新动态（Jquery-WeUI页面引入）</div>
   <div class="weui-panel__bd">
     <a href="http://db7qpj.natappfree.cc/index_detail" class="weui-media-box weui-media-box_appmsg">
       <div class="weui-media-box__hd">
