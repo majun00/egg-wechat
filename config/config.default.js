@@ -10,9 +10,9 @@ module.exports = appInfo => {
   config.middleware = [ 'xml2js' ];
 
   config.wechat_config = {
-    token: 'wechat_public_number_demo',
-    appId: 'wx230f799414023398',
-    appSecret: '27118b180d47a9b11c094a03cea63a74',
+    token: 'wechat',
+    appId: 'wx36ddef7981435b3a',
+    appSecret: '4ffed5b0943bb39571ef9f2eaf63e341',
     getAccessTokenUrl: 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET',
     postCreateMenuUrl: 'https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN',
     getUserInfoUrl: 'https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN',

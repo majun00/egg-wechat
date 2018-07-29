@@ -16,8 +16,18 @@ module.exports = app => {
             },
             {
               type: 'view',
-              name: 'view',
-              url: 'https://chrish.ngrok.xiaomiqiu.cn',
+              name: 'JSSDK',
+              url: 'http://db7qpj.natappfree.cc',
+            },
+            {
+              type: 'view',
+              name: '用户信息',
+              url: 'http://db7qpj.natappfree.cc/getUserInfo',
+            },
+            {
+              type: 'view',
+              name: '首页',
+              url: 'http://db7qpj.natappfree.cc/index',
             },
           ],
         },

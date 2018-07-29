@@ -9,4 +9,9 @@ module.exports = app => {
   router.get('/wechat', controller.home.fromWechat);
   router.post('/wechat', controller.home.toWechat);
   router.get('/oauth', controller.home.oauth);
+  router.get('/getUserInfo', controller.home.getUserInfo);
+
+  //jquery-weui网页
+  router.get('/index', controller.home.main);
+  router.get('/index_detail', controller.home.index_detail);
 };

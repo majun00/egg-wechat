@@ -9,7 +9,7 @@ class HomeController extends Controller {
     const ticket = this.ctx.app.ticket;
     const nonceStr = Math.random().toString(36).substr(2, 15);
     const timestamp = parseInt(new Date().getTime() / 1000);
-    const url = 'http://chrish.ngrok.xiaomiqiu.cn/';
+    const url = 'http://db7qpj.natappfree.cc/';
     const string = 'jsapi_ticket=' + ticket + '&noncestr=' + nonceStr + '&timestamp=' + timestamp + '&url=' + url;
     const hash = crypto.createHash('sha1');
     hash.update(string);
@@ -64,7 +64,7 @@ class HomeController extends Controller {
     const code = query.code;
     const config = this.ctx.app.config.wechat_config;
     const url = config.getOauthAccessTokenUrl.replace('APPID', config.appId)
-      .replace('SECRET', config.appSecret).replace('CODE', code);
+        .replace('SECRET', config.appSecret).replace('CODE', code);
     const res = await this.ctx.curl(url, {
       dataType: 'json',
     });
@@ -75,8 +75,35 @@ class HomeController extends Controller {
       dataType: 'json',
     });
     console.log(userInfoRes.data);
-    this.ctx.body = 'hi, ' + userInfoRes.data.nickname;
+    //this.ctx.body = 'hi, ' + userInfoRes.data.nickname;
+
+    await this.ctx.render('myinfo', {'userinfo': userInfoRes.data});
+
   }
+
+
+  async getUserInfo() {
+    console.log("wxLogin_____");
+    const AppID = 'wx36ddef7981435b3a';
+    // 第一步：用户同意授权，获取code
+    const router = 'oauth';
+    // 这是编码后的地址 http://qqtg78.natappfree.cc
+    const return_uri = 'http%3A%2F%2Fdb7qpj.natappfree.cc%2F'+router;
+    const scope = 'snsapi_userinfo';
+    this.ctx.redirect('https://open.weixin.qq.com/connect/oauth2/authorize?appid='+AppID+'&redirect_uri='+return_uri+'&response_type=code&scope='+scope+'&state=STATE#wechat_redirect');
+
+  }
+
+  async main() {
+    await this.ctx.render('index');
+  }
+  async index_detail() {
+    await this.ctx.render('index_detail');
+  }
+
+
 }
+
+
 
 module.exports = HomeController;

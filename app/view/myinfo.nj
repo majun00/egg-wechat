@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>获取用户信息</title>
+  <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body>
+        <p>你好！ {{userinfo.nickname }}</p></p>
+
+        <p><img src="{{ userinfo.headimgurl }}" /></p>
+
+        <p>地区    {{userinfo.province}}  {{ userinfo.city }}</p>
+
+</body>
+</html>
