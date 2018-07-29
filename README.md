@@ -47,6 +47,16 @@ $ npm stop
 ```
 
 微信公众号配置截图：
+
 ![配置页1](https://upload-images.jianshu.io/upload_images/2227968-f0aed7bf4bde33e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![配置页2](https://upload-images.jianshu.io/upload_images/2227968-32a0b120450c1073.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+微手机端微信公众号运行效果：
+
+![首页，jquery-weui开发页面](https://upload-images.jianshu.io/upload_images/2227968-557cc1f144ccaab1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+![获取用户信息页面](https://upload-images.jianshu.io/upload_images/2227968-1f42f9ef6cebafee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![交互测试页面](https://upload-images.jianshu.io/upload_images/2227968-2b90a7b819b89c59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
