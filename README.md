@@ -46,3 +46,8 @@ $ npm stop
    4.5 配置：体验接口权限表中的网页授权获取用户基本信息，点击修改，地址为natapp地址，不需要http://
 5、扫描微信公众号，即可查看微信公众号效果。
 ```
+
+微信公众号配置截图：
+![配置页1](https://upload-images.jianshu.io/upload_images/2227968-f0aed7bf4bde33e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![配置页2](https://upload-images.jianshu.io/upload_images/2227968-32a0b120450c1073.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
