@@ -52,7 +52,7 @@ $ npm stop
 3、jquery-weui网页页面接入
 3、与微信交互文字交互、发送地图、发送相片等。
 4、具体文字交互也可参考的express版本的： https://github.com/dpc761218914/express_wechat_demo
-5、项目参考工程： https://github.com/chrish-2017/wechat_public_number_demo
+5、项目参考工程： https://github.com/chrish-2017/wechat_public_number_demo （表示感谢）
 ```
 
 微信公众号配置截图：
