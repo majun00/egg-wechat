@@ -17,17 +17,17 @@ module.exports = app => {
             {
               type: 'view',
               name: 'JSSDK',
-              url: 'http://db7qpj.natappfree.cc',
+              url: 'http://4m6x9w.natappfree.cc',
             },
             {
               type: 'view',
               name: '用户信息',
-              url: 'http://db7qpj.natappfree.cc/getUserInfo',
+              url: 'http://4m6x9w.natappfree.cc/getUserInfo',
             },
             {
               type: 'view',
               name: '首页',
-              url: 'http://db7qpj.natappfree.cc/index',
+              url: 'http://4m6x9w.natappfree.cc/index',
             },
           ],
         },
@@ -68,6 +68,7 @@ module.exports = app => {
         },
       ],
     };
+
     const config = app.config.wechat_config;
     const url = config.postCreateMenuUrl.replace('ACCESS_TOKEN', app.access_token);
     const res = await app.curl(url, {
@@ -76,6 +77,6 @@ module.exports = app => {
       data: menu,
       dataType: 'json',
     });
-    console.log(res.data.errcode);
+    // console.log(res.data.errcode);
   });
 };

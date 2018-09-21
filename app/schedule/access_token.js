@@ -16,15 +16,16 @@ class UpdateCache extends Subscription {
     const res = await this.ctx.curl(url, {
       dataType: 'json',
     });
-    console.log(res.data.access_token);
+    // console.log(res.data.access_token);
     this.ctx.app.access_token = res.data.access_token;
 
     const jsUrl = config.getJsApiTicketUrl.replace('ACCESS_TOKEN', res.data.access_token);
     const jsRes = await this.ctx.curl(jsUrl, {
       dataType: 'json',
     });
-    console.log(jsRes.data.ticket);
+    // console.log(jsRes.data.ticket);
     this.ctx.app.ticket = jsRes.data.ticket;
+
   }
 }
 

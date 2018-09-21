@@ -10,7 +10,7 @@ module.exports = () => {
           data += chunk;
         });
         ctx.req.on('end', () => {
-          console.log(data);
+          // console.log(data);
           xml2js.parseXml(data).then(result => {
             resolve(result);
           }).catch(err => {

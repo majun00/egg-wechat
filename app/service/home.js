@@ -9,8 +9,8 @@ class HomeService extends Service {
     let reply;
     switch (Event) {
       case 'subscribe':
-        console.log(EventKey);
-        console.log(Ticket);
+        // console.log(EventKey);
+        // console.log(Ticket);
         reply = '欢迎关注我的测试公众号';
         break;
       case 'unsubscribe':
@@ -46,7 +46,7 @@ class HomeService extends Service {
         reply = PicUrl;
         break;
       case 'voice':
-        console.log(Recognition);
+        // console.log(Recognition);
         reply = MediaId;
         break;
       case 'video':
