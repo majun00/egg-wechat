@@ -4,26 +4,6 @@ const crypto = require('crypto');
 const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
-  // jssdk接入，发送appId,timestamp/noceStr,signature到前端。
-  async index() {
-    console.log('route /');
-    const appId = this.ctx.app.config.wechat_config.appId;
-    const ticket = this.ctx.app.ticket;
-    const nonceStr = Math.random().toString(36).substr(2, 15);
-    const timestamp = parseInt(new Date().getTime() / 1000);
-    const url = 'http://4m6x9w.natappfree.cc/';
-    const string = 'jsapi_ticket=' + ticket + '&noncestr=' + nonceStr + '&timestamp=' + timestamp + '&url=' + url;
-    const hash = crypto.createHash('sha1');
-    hash.update(string);
-    const signature = hash.digest('hex');
-    const data = {
-      appId,
-      timestamp,
-      nonceStr,
-      signature,
-    };
-    await this.ctx.render('home', data);
-  }
 
   async fromWechat() {
     console.log('route /fromWechat');
@@ -62,6 +42,27 @@ class HomeController extends Controller {
       }
     }
     this.ctx.body = 'success';
+  }
+
+  // jssdk接入，发送appId,timestamp/noceStr,signature到前端。
+  async index() {
+    console.log('route /');
+    const appId = this.ctx.app.config.wechat_config.appId;
+    const ticket = this.ctx.app.ticket;
+    const nonceStr = Math.random().toString(36).substr(2, 15);
+    const timestamp = parseInt(new Date().getTime() / 1000);
+    const url = 'http://4m6x9w.natappfree.cc/';
+    const string = 'jsapi_ticket=' + ticket + '&noncestr=' + nonceStr + '&timestamp=' + timestamp + '&url=' + url;
+    const hash = crypto.createHash('sha1');
+    hash.update(string);
+    const signature = hash.digest('hex');
+    const data = {
+      appId,
+      timestamp,
+      nonceStr,
+      signature,
+    };
+    await this.ctx.render('home', data);
   }
 
   async getUserInfo() {
